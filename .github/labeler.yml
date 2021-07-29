@@ -1,0 +1,14 @@
+function:
+  - mathapi/math/function/*
+derivative:
+  - mathapi/math/derivative/*
+es:
+  - mathapi/math/es/*
+integral:
+  - mathapi/math/integral/*
+euler_functions:
+  - mathapi/math/euler_functions/*
+factorial:
+  - mathapi/math/factorial/*
+methods:
+  - mathapi/math/mehtods/*
