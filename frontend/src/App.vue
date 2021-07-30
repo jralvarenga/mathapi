@@ -9,18 +9,18 @@
     url(./assets/font/Inter-Regular.ttf) format("truetype");
 }
 
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+@font-face {
+  font-family: "inter-extrabold";
+  src: local("inter-extrabold"),
+    url(./assets/font/Inter-ExtraBold.ttf) format("truetype");
 }
 
-body {
+body,
+html{
   font-family: 'inter';
   font-size: 16px;
   color: rgb(27, 27, 27);
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
 }
 </style>
