@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
+import TryAPI from '../views/TryAPI.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/try-api',
+    name: 'TryAPI',
+    component: TryAPI
   },
   /*{
     path: '/about',

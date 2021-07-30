@@ -1,13 +1,13 @@
 <template>
   <div class="top-bar">
 
-    <span class="api-name">
+    <span @click="goHome" class="api-name">
       Math<span class="api">API</span>
     </span>
 
     <div class="page-buttons">
       <span @click="goToDocs" class="docs-button">Docs</span>
-      <span class="try-it-button">Try it</span>
+      <span @click="goToTryAPI" class="try-it-button">Try it</span>
     </div>
 
   </div>
@@ -20,7 +20,13 @@ export default defineComponent({
   name: "top-bar",
   methods: {
     goToDocs() {
-      window.open('https://github.com/jralvarenga/mathapi')
+      window.open('https://github.com/jralvarenga/mathapi');
+    },
+    goToTryAPI() {
+      this.$router.push('/try-api');
+    },
+    goHome() {
+      this.$router.push('/');
     }
   }
 })
@@ -39,6 +45,7 @@ export default defineComponent({
 .api-name {
   font-size: 30px;
   font-family: inter-extrabold;
+  cursor: pointer;
 }
 .api {
   color: rgb(59, 46, 131);

@@ -42,8 +42,7 @@
 import { defineComponent } from 'vue';
 import TopBar from '../components/TopBar.vue';
 
-//import functionIcon from '../assets/icons/function.svg';
-
+// eslint-disable-next-line
 interface AppFeatures {
   name: string
   icon: string
@@ -107,7 +106,7 @@ export default defineComponent({
   },
   methods: {
     goToDoc(link: string) {
-      window.open(link)
+      window.open(link);
     }
   }
 });
