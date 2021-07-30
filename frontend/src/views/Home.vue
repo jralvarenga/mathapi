@@ -20,7 +20,11 @@
         With Math<span class="api">API</span> yo can
       </span>
 
-      <div class="feature-box">
+      <div class="feature-container">
+
+        <div class="feature-box" v-for="feat, i in features" :key="i">
+          <span>{{ feat.name }}</span>
+        </div>
 
       </div>
     </div>
@@ -34,9 +38,39 @@ import TopBar from '../components/TopBar.vue';
 
 //import functionIcon from '../assets/icons/function.svg';
 
+interface AppFeatures {
+  name: string
+  icon: string
+}
+
 export default defineComponent({
   name: 'Home',
   components: { TopBar },
+  data() {
+    return {
+      features: [{
+        name: 'Function Solver',
+        link: 'https://github.com/jralvarenga/mathapi/tree/master/mathapi/math/function'
+      },
+      {
+        name: 'Function Derivative',
+        link: 'https://github.com/jralvarenga/mathapi/tree/master/mathapi/math/derivative'
+      },
+      {
+        name: 'Function Integral',
+        link: 'https://github.com/jralvarenga/mathapi/tree/master/mathapi/math/integral'
+      },
+      {
+        name: 'Numerical Methods',
+        link: 'https://github.com/jralvarenga/mathapi/tree/master/mathapi/math/methods'
+      },
+      {
+        name: 'Euler Functions',
+        link: 'https://github.com/jralvarenga/mathapi/tree/master/mathapi/math/euler_functions'
+      }
+      ]
+    }
+  }
 });
 </script>
 
@@ -69,10 +103,19 @@ export default defineComponent({
   font-weight: 600;
   color: rgb(94, 94, 94);
 }
-.feature-box {
+.feature-container {
   width: 80%;
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
+  justify-content: center;
+  margin-top: 30px;
+}
+.feature-box {
+  margin: 20px;
+  width: 250px;
+  height: 150px;
+  padding: 15px;
+  border: 1px solid rgb(163, 163, 163);
+  border-radius: 15px;
 }
 </style>
