@@ -6,6 +6,8 @@ node_modules/
 vercel.json
 frontend/
 README.md
+LICENCE
+.editorconfig
 CONTRIBUTING.md
 .github/
 yarn.lock
