@@ -8,7 +8,7 @@
           <span>Try the API</span>
         </div>
         <div class="description">
-          <span>Select or digit the API url you what to try (Read the <a target="_blank" href="https://github.com/jralvarenga/mathapi">docs</a> first)</span>
+          <span>Select or write the API url you what to try (Read the <a target="_blank" href="https://github.com/jralvarenga/mathapi">docs</a> first)</span>
         </div>
         <div class="input-container">
           <input class="url-input" type="text" v-model="url">
@@ -44,7 +44,7 @@ export default defineComponent({
   name: "TryAPI",
   data() {
     return {
-      url: "https//mathapi.vercel.app/api/function/points/",
+      url: "https://mathapi.vercel.app/api/function/points/",
       body: JSON.stringify({"fx": "3*x^(3) + 2*x - 1","from": -1,"to": 5}, undefined, 2),
       response: JSON.stringify({}, undefined, 2)
     }
@@ -54,35 +54,35 @@ export default defineComponent({
       const type: string = e.target.value;
       switch (type) {
         case 'plot':
-          this.url = "https//mathapi.vercel.app/api/function/points/";
+          this.url = "https://mathapi.vercel.app/api/function/points/";
           this.body = JSON.stringify({"fx": "3*x^(3) + 2*x - 1","from": -1,"to": 5}, undefined, 2);
         break;
         case 'derivative':
-          this.url = "https//mathapi.vercel.app/api/derivative/";
+          this.url = "https://mathapi.vercel.app/api/derivative/";
           this.body = JSON.stringify({"fx": "3*x^(3) - 2*x^(1/2) + 1"}, undefined, 2);
         break;
         case 'integral':
-          this.url = "https//mathapi.vercel.app/api/integral/";
+          this.url = "https://mathapi.vercel.app/api/integral/";
           this.body = JSON.stringify({"fx": "3*x^(3) - 2*x^(1/2) + 1"}, undefined, 2);
         break;
         case 'beta':
-          this.url = "https//https//mathapi.vercel.app/api/euler-functions/beta/";
+          this.url = "https://mathapi.vercel.app/api/euler-functions/beta/";
           this.body = JSON.stringify({"x": "1/2","y": "3"}, undefined, 2);
         break;
         case 'factorial':
-          this.url = "https//https//mathapi.vercel.app/api/factorial/";
+          this.url = "https://mathapi.vercel.app/api/factorial/";
           this.body = JSON.stringify({"n": "1/2"}, undefined, 2);
         break;
         case 'newton-rhapson':
-          this.url = "https//mathapi.vercel.app/api/methods/function-root/newton-rhapson/";
+          this.url = "https://mathapi.vercel.app/api/numeric-methods/function-root/newton-rhapson/";
           this.body = JSON.stringify({"fx": "2*x^(3)-2*x-5","xi": 2}, undefined, 2);
         break;
         case 'trapz-rule':
-          this.url = "https//mathapi.vercel.app/api/methods/integral/trapz/";
+          this.url = "https://mathapi.vercel.app/api/numeric-methods/integral/trapz/";
           this.body = JSON.stringify({"fx": "3*x^(2) + 3*x - 1","a": 0,"b": 1}, undefined, 2);
         break;
         default:
-          this.url = "https//mathapi.vercel.app/api/function/points/";
+          this.url = "https://mathapi.vercel.app/api/function/points/";
           this.body = JSON.stringify({"fx": "3*x^(3) + 2*x - 1","from": -1,"to": 5}, undefined, 2);
         break;
       }      
@@ -98,10 +98,8 @@ export default defineComponent({
         body: body,
         redirect: 'follow'
       });
-      const data = await res.text();
-      console.log(data);
-      
-      //this.response = JSON.stringify(data, undefined, 2);
+      const data = await res.json();
+      this.response = JSON.stringify(data, undefined, 2);
     }
   }  
 })
