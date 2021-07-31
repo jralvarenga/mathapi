@@ -46,4 +46,4 @@ For contribution, fork the repo, create a branch and name it with the feature yo
 | [es](mathapi/math/es)            | Ecuation sistem solution     |
 | [factorial](mathapi/math/factorial)            | Factorial of integer or fraction     |
 | [euler_functions](mathapi/math/euler_functions) | All euler function related (gamma, beta, phi functions)     |
-| [methods](mathapi/math/euler_functions)       | Numeric methods     |
+| [methods](mathapi/math/methods)       | Numeric methods     |
