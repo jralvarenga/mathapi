@@ -4,5 +4,6 @@ node_modules/
 .envrc
 *.sqlite3
 vercel.json
+frontend/
 README.md
 yarn.lock
