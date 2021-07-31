@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # cors
+    'corsheaders',
     # Landing page
     'pages.apps.PagesConfig',
 ]
@@ -49,7 +51,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # cors
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+# Cors allow all domains
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'mathapi.urls'
 

@@ -93,9 +93,10 @@ export default defineComponent({
       const res = await fetch(link, {
         method: 'post',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': "application/json",
         },
-        body: JSON.stringify(body)
+        body: body,
+        redirect: 'follow'
       });
       const data = await res.text();
       console.log(data);
