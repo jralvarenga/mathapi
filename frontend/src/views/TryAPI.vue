@@ -50,6 +50,7 @@ export default defineComponent({
     }
   },
   methods: {
+    // eslint-disable-next-line
     changeBody(e: any) {
       const type: string = e.target.value;
       switch (type) {
@@ -89,6 +90,7 @@ export default defineComponent({
     },
     async getResponse() {
       const link: string = this.url;
+      // eslint-disable-next-line
       const body: any = this.body;
       const res = await fetch(link, {
         method: 'post',
