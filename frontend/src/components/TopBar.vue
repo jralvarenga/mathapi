@@ -44,7 +44,7 @@ export default defineComponent({
 }
 .api-name {
   font-size: 30px;
-  font-family: inter-extrabold;
+  font-weight: 800;
   cursor: pointer;
 }
 .api {
@@ -62,7 +62,7 @@ export default defineComponent({
   padding-right: 35px;
   background: rgb(59, 46, 131);
   color: #fff;
-  font-family: inter-extrabold;
+  font-weight: 800;
   border-radius: 10px;
   cursor: pointer;
   transition: 300ms;

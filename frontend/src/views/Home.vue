@@ -42,13 +42,6 @@
 import { defineComponent } from 'vue';
 import TopBar from '../components/TopBar.vue';
 
-// eslint-disable-next-line
-interface AppFeatures {
-  name: string
-  icon: string
-  description: string
-}
-
 export default defineComponent({
   name: 'Home',
   components: { TopBar },
@@ -127,7 +120,7 @@ export default defineComponent({
 .start-message {
   width: 70%;
   text-align: center;
-  font-family: inter-extrabold;
+  font-weight: 800;
   font-size: 80px;
 }
 .api {

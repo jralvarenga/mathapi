@@ -128,7 +128,7 @@ export default defineComponent({
 }
 .title {
   margin-top: 30px;
-  font-family: inter-extrabold;
+  font-weight: 800;
   font-size: 45px;
 }
 .description {
@@ -189,7 +189,7 @@ export default defineComponent({
   margin-top: 20px;
   background: rgb(59, 46, 131);
   color: #fff;
-  font-family: inter-extrabold;
+  font-weight: 800;
   border-radius: 10px;
   border: 0px;
   cursor: pointer;
