@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "mathapi",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "lottie-vuejs": "^0.4.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },

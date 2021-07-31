@@ -24,8 +24,7 @@
 
         <div class="feature-box" @click="goToDoc(feat.link)" v-for="feat, i in features" :key="i">
           <div class="feat-name">
-            <span>{{ feat.name }}</span>
-            <img class="feat-icon" :src="feat.icon" alt="">
+            <span class="bold">{{ feat.name }}</span>
           </div>
           <div class="feat-description">
             <span>{{ feat.description }}</span>
@@ -51,49 +50,41 @@ export default defineComponent({
         name: 'Function Solver',
         description: "Solves function in any point given, gets plot points and gets function critic values",
         link: 'https://github.com/jralvarenga/mathapi/tree/master/mathapi/math/function',
-        icon: 'icons/function.svg'
       },
       {
         name: 'Function Derivative',
         description: "Get function derivative and/or can evaluate derivatives in any point given",
         link: 'https://github.com/jralvarenga/mathapi/tree/master/mathapi/math/derivative',
-        icon: 'icons/plot.svg'
       },
       {
         name: 'Function Integral',
         description: "Get function integral and/or can evaluate integral in any point given",
         link: 'https://github.com/jralvarenga/mathapi/tree/master/mathapi/math/integral',
-        icon: 'icons/integral.svg'
       },
       {
         name: 'Euler Functions',
         description: "Returns gamma, beta & phi functions of any number",
         link: 'https://github.com/jralvarenga/mathapi/tree/master/mathapi/math/euler_functions',
-        icon: 'icons/euler.svg'
       },
       {
         name: 'Factorial',
         description: "Gets the factorial value of an integer or fraction",
         link: 'https://github.com/jralvarenga/mathapi/tree/master/mathapi/math/factorial',
-        icon: 'icons/factorial.svg'
       },
       {
         name: 'Algebra',
         description: "To be added",
         link: '#',
-        icon: 'icons/algebra.svg'
       },
       {
         name: 'Geometry',
         description: "To be added",
         link: '#',
-        icon: 'icons/geometry.svg'
       },
       {
         name: 'Numerical Methods',
         description: "Solves any problem with any numeric method",
         link: 'https://github.com/jralvarenga/mathapi/tree/master/mathapi/math/methods',
-        icon: 'icons/methods.svg'
       }]
     }
   },
@@ -125,6 +116,9 @@ export default defineComponent({
 }
 .api {
   color: rgb(59, 46, 131);
+}
+.bold {
+  font-weight: 800;
 }
 .description-text {
   width: 80%;
